@@ -16,8 +16,8 @@ steps:
 - script: dotnet restore
   displayName: 'dotnet restore'
   
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+- script: dotnet build --configuration $(buildConfiguration) -f netstandard2.0
+  displayName: 'dotnet build $(buildConfiguration) -f netstandard2.0'
 
 
 - task: DotNetCoreCLI@2
