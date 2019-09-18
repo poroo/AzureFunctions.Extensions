@@ -19,9 +19,3 @@ steps:
 - script: dotnet build ./src/Aliencube.AzureFunctions.Extensions.OpenApi/Aliencube.AzureFunctions.Extensions.OpenApi.csproj --configuration $(buildConfiguration) -f netstandard2.0
   displayName: 'dotnet build $(buildConfiguration) -f netstandard2.0'
 
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: test
-    projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
